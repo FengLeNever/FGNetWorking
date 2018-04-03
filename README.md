@@ -22,16 +22,16 @@
           config.callbackQueue = dispatch_get_main_queue();
           //路径中拼接,与服务器约定的一些不会改动的参数,比如:渠道,系统版本...
           config.generalParameters = @{
-          @"os":@"---",
-          @"channel":@"---",
-          @"osversion":@"---",
+                  @"os":@"---",
+                  @"channel":@"---",
+                  @"osversion":@"---",
           };
           //路径中拼接,与服务器约定的一些会改动的参数,比如:网络状态,请求时间戳...
           config.realTimeParametersBlock = ^NSDictionary * _Nonnull{
           return @{
-          @"time":@"---",
-          @"network":@"---"
-          };
+                  @"time":@"---",
+                  @"network":@"---"
+                 };
           };
     }];
 }
@@ -43,8 +43,8 @@
         item.api = k_auth_qqLogin;
         //配置请求的参数
         item.parameters = @{
-        @"666":@"999"
-        };
+                           @"666":@"999"
+                           };
         } onSuccess:^(id  _Nullable responseObject) {
         //成功回调
         } onFailure:^(NSError * _Nullable error) {
